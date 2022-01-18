@@ -1,0 +1,59 @@
+YAML Basic Elements
+Comments in YAML begins with the ( # ) character.
+# this is single line comment.
+YAML does not support multi line comments. If you want to provide comments for multiple lines, you can do so as shown below.
+# this
+# is a multiple
+# line comment
+
+Comments must be separated from other tokens by whitespaces.
+
+The indentation of whitespace is used to denote structure.
+
+Tabs are not included as indentation for YAML files.
+
+List members are denoted by a leading hyphen ( - ).
+
+List members are enclosed in square brackets and separated by commas.
+
+Associative arrays are represented using a colon ( : ) in the format of key-value pairs. They are enclosed in curly braces {} .
+
+Multiple documents with single streams are separated with 3 hyphens ( --- ).
+
+Repeated nodes in each file are initially denoted by an ampersand ( & ) and by an asterisk ( * ) mark later.
+
+YAML always requires colons and commas used as list separators followed by space with scalar values.
+
+Nodes should be labeled with an exclamation mark ( ! ) or double exclamation mark ( !! ), followed by a string that can be expanded into a URI or URL.
+
+Basics
+All YAML files can optionally begin with --- and end with .... This is part of the YAML format and indicates the start and end of a document.
+---
+# A list of courses
+- AWS
+- DevOps
+- Web Developer
+...
+
+A dictionary is represented in a simple key: value form (the colon must be followed by a space):
+# Courses 
+AWS:
+    name: AWS Course
+    job: Developer
+    level: Advance
+
+More complicated data structures are possible, such as lists of dictionaries, dictionaries whose values are lists or a mix of both:
+# Employee records
+-  john:
+    name: John Clarusway
+    job: Developer
+    skills:
+      - python
+      - js
+-  james:
+    name: James Garcia
+    job: Developer
+    skills:
+      - fortran
+      - erlang
+
