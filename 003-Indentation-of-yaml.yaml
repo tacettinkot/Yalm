@@ -2,17 +2,19 @@ Indentation
 Indentation and separation are the two main concepts when you are learning any programming language.
 Indentation of YAML
 YAML does not include any mandatory spaces. Further, there is no need to be consistent. The valid YAML indentation is shown below
-a:
+  a:
    b:
       - c
       -  d
       - e
-f:
+  f:
       "ghi"
 
 There are two styles which we can write our YAML;
 
-Block Styles : The block style is the YAML that you've probably seen before and are somewhat familiar with. It's the less compact and often indented traditional YAML that makes it easy for us humans to look at the file,
+Block Styles : The block style is the YAML that you've probably seen before and 
+are somewhat familiar with. It's the less compact and often indented traditional 
+YAML that makes it easy for us humans to look at the file,
 
 Less Compact
 Better for Humans
@@ -26,22 +28,27 @@ Better for Humans
   hr:   63
   avg:  0.288
 
-Flow Styles : The flow styles are an extension of JSON that allows for YAML and JSON to sort of work together. It's less human-readable, but they are sometimes better for the computer that processing your YAML and flow styles rely on folding lines of content.
+Flow Styles : The flow styles are an extension of JSON that allows for YAML 
+and JSON to sort of work together. It's less human-readable, but they are sometimes 
+better for the computer that processing your YAML and flow styles rely on folding lines of content.
 
 An Extension of JSON
+
 John MC {hr: 65, avg: 0.278}
 James Oliver: {
     hr: 63,
     avg: 0.288
   }
 
-The flow content of YAML spans multiple lines. The beginning of flow content begins with " { " or " [ " .
-The block list items include same indentation as the surrounding block level because `-` is considered as a part of indentation.
+The flow content of YAML spans multiple lines. The beginning of flow 
+content begins with " { " or " [ " .
+The block list items include same indentation as the surrounding block level 
+because `-` is considered as a part of indentation.
 Example:
 --- !clarusway.com/^invoice
-invoice: 20201
-date   : 2-3-2020
-bill-to: &id002
+ invoice: 20201
+ date   : 2-3-2020
+ bill-to: &id002
    given  : Aaron
    family : A
    address:
@@ -51,5 +58,3 @@ bill-to: &id002
       city    : Royal Oak
       state   : MI
       postal  : 121212
-
-
