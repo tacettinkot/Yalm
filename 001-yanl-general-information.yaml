@@ -1,0 +1,46 @@
+Basics of YAML
+When you are creating a file in YAML, you should remember the following basic rules
+
+YAML is case sensitive
+The files should have .yaml(or .yml)as the extension
+YAML does not allow the use of tabs while creating YAML files; spaces are allowed instead
+⚠️Avoid ! :
+YAML does not allow the use of tabs. Spaces are used instead of tabs because tabs are not universally supported.
+The key-value is YAML's basic building block. The key is always a string. The value is a scalar so that it can be any data type.
+Key-Value Pair
+Key: Value
+Fruit: Banana
+Meat: Chicken
+Course: Clarusway
+A list:
+- 1
+- false
+- 'a string'
+
+A dictionary:
+key1: val1
+key2: val2
+key3: val3
+
+A list of dictionaries:
+Company:
+    -   name: Aaron
+        age: 35
+    -   name: James
+        age 35
+
+Conventional Block Format uses hyphen+space to begin a new item in a specified list.
+--- # Courses
+ - Aws/DevOps
+ - Web Developer
+ - QA Tester
+
+Inline format is delimited with comma and space and the items are enclosed in JSON (similar to JSON).
+--- # Course List
+   [Aws/DevOps,  Web Developer, QA Tester]
+
+Folded text converts newlines to spaces and removes the leading whitespace.
+- {name: John MC, age: 18}
+- name:James Garcia
+  age:19
+

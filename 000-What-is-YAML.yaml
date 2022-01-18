@@ -1,0 +1,31 @@
+What is YAML?
+YAML Ain't Markup Language (abbreviated YAML)
+  YAML  YAML is designed by Clark Evans, Ingy döt Net, and Oren Ben-Kiki. (2001)
+
+  YAML  YAML was meant “Yet Another Markup Language”.
+  Its goal was another markup language, but YAML was filling the role of a data serialization language later, so it was called YAML Ain’t Markup Language, which is a recursive acronym.
+  YAML takes concepts from popular languages like Python, Ruby, PHP, and JavaScript. There are familiar terms like scalars, arrays, lists, sequences, and mappings. It also relies on common data structures, just plain indentation, dashes, colons. It is useful to manage data and includes Unicode printable characters.
+YAML Code:
+- name: John
+country: US
+age: 40
+
+- name: James
+country: US
+
+To check all the features and the updates about YAML, click the official web page link below:
+
+https://yaml.org/
+
+Attributes of YAML
+The design goals for YAML are:
+
+YAML is human readable.
+YAML is portable.
+YAML works across multiple programming languages easily.
+YAML matches the native data of structures, to agile languages.
+YAML is consistent and is able to support generic tools.
+YAML supports one-pass processing,(when a programming language looks at YAML file, it only needs to go through it once to complete its task.)
+YAML is expressive easy to extend and adapt.
+YAML should be easy to implement and use.
+
