@@ -1,0 +1,41 @@
+# YAML Ain't Markup Language
+
+person:
+ name: &name "Tom"
+ occupation: 'DevOps'
+ age: 35
+ weight: !!float 90 # 90.0
+ gpa: !!str 3.5     # "3.5"
+ fav_num: 1e+10
+ male: true
+ birthday: 1990-03-19  14:33:25  # ISO 8601
+ flaws: null
+ hobbies: 
+    - hiking
+    - picnic
+    - camping
+ movies: ['Dark Knight', 'Lord of The Rings']
+ friends:
+  - name: 'John'
+  - age: 30
+  - {name: 'Adam', age:27}
+  -
+   name: "joe"
+   age: 33
+  description: > # use like a single line, every new like will be like a space
+     YAML: YAML Ain't Markup Language™
+     What It Is:
+     YAML is a human-friendly data serialization
+     language for all programming languages.
+ signature: | # keep the way of data
+    Mike
+    WSU
+    email - mikebetterson@wsu.org
+  id: *name # "Tom"
+
+  base: &base
+    var1: value1
+
+  foo:
+   <<: *base # var1: value1
+   var2: value2
