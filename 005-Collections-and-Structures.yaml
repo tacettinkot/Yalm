@@ -1,0 +1,81 @@
+Collections and Structures
+Collections
+YAML includes block collections that use indentation for scope. Block sequences indicate each entry with a dash and space ( - ).
+
+Mappings use key-value pair representation with the usage of colon and space (: ) .
+
+Example of Sequence:
+ - John
+ - James
+ - Aaron
+ - Oliver
+ - Walter 
+
+Example of Mapping:
+ hr: 160
+ avg: 0.298
+ rbi: 153
+
+Example of Mapping to Sequence:
+ AWS-DevOps:
+ - Linux
+ - AWS
+ - Docker
+
+ Developer:
+ - Html
+ - Css
+ - js
+
+Example of Sequence of Mappings:
+ -
+  name: Aaron
+  age: 35
+  job: Developer
+ -
+  name: Oliver
+  age: 36
+  job: Developer
+
+Example of Sequence of Sequences:
+ - [name  , age, job  ]
+ - [Aaron , 35  , Developer]
+ - [Oliver , 36  , Developer]
+
+Example of Mapping of Mappings:
+ Aaron: {age: 35,  job: Developer}
+ Oliver: {
+   age: 36,
+   job: Developer
+  }
+
+Structures
+YAML uses three dashes ( --- ) to separate directives from document content. 
+This also serves to signal the start of a document if no directives are present. 
+Three dots ( ... ) indicate the end of a document without starting a new one, 
+for use in communication channels.
+
+Repeated nodes (objects) are first identified by an anchor (marked with the 
+ampersand - & ) , and are then aliased (referenced with an asterisk * ) thereafter.
+
+person:
+  name: &name "Oliver"
+  occupation: 'programmer'
+  age: 33
+
+id: *name #Oliver
+
+A question mark and space ( ? ) indicate a complex mapping key. Within a block 
+collection, key: value pairs can start immediately following the dash, colon, 
+or question mark.
+
+? - Detroit Tigers
+  - Chicago cubs
+:
+  - 2020-03-09
+
+? [ New York Yankees,
+    Atlanta Braves ]
+: [ 2020-03-09, 2020-02-12,
+    2020-01-14 ]
+
