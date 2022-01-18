@@ -1,0 +1,58 @@
+Scalars and Tags
+YAML supports some basic data types which can be used with programming languages such as;
+
+Scalars − strings or numbers or boolean or null.
+Sequences − arrays or lists.
+Mappings − hashes or dictionaries.
+in YAML;
+
+Scalars are written in block format using a literal type which is denoted as ( | ).
+
+Scalars are written in folded style ( > ) where each line denotes a folded space which ends with an empty line or more indented line.
+
+data: |
+   Each of these
+   Newlines
+   Will be broken up
+
+data: >
+   This text is
+   wrapped and will
+   be formed into
+   a single paragraph
+
+Strings
+  A string in YAML
+
+ 'A singled-quoted string in YAML'
+
+ "A double-quoted string in YAML"
+
+Number
+ # an integer
+   12
+
+ # an octal
+   014
+
+ # a hexadecimal
+   0xC
+
+ # afloat
+   13.4
+
+ # infinity
+   .inf
+
+Others
+Nulls : Nulls in YAML can be expressed with null or ~.
+
+Booleans : Booleans in YAML are expressed with true and false .
+
+Dates : YAML uses the ISO-8601 standard to express dates.
+
+2020-03-15T21:59:43.10-05:00
+
+# simple date
+2020-03-15
+
